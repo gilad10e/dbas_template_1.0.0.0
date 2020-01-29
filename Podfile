@@ -6,9 +6,8 @@ target 'ios_example_girlad' do
   use_frameworks!
 
   # Pods for ios_example_girlad
-	pod 'AWSCognitoAuth'
+	pod 'AWSCognito'
 	pod 'AWSCore'
-	pod 'AWSCognitoIdentityProvider'
-	pod 'GoogleMaps'
-	pod 'GooglePlaces'
+  pod 'AWSCognitoAuth'
+  pod 'AWSCognitoIdentityProvider'
 end

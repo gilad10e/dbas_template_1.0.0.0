@@ -2,6 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>AWS</key>
+        <dict>
+            <key>CognitoUserPool</key>
+            <dict>
+                <key>Default</key>
+                <dict>
+                    <key>CognitoUserPoolAppClientId</key>
+                    <string>55bq74q6pru9iurldeoska05sq</string>
+                    <key>CognitoUserPoolAppClientSecret</key>
+                    <string>19oi02eisckctte4hn1sedsidsksh9tai4j2d6gsgbqrs0qhh09b</string>
+                    <key>CognitoAuthWebDomain</key>
+                    <string>dontbe.auth.us-east-2.amazoncognito.com</string>
+                    <key>CognitoAuthSignInRedirectUri</key>
+                    <string>myapp://signin</string>
+                    <key>CognitoAuthSignOutRedirectUri</key>
+                    <string>myapp://signout</string>
+                </dict>
+            </dict>
+        </dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

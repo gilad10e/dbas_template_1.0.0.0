@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,10 @@
 		1858905423D21C2C00C72C4A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858905323D21C2C00C72C4A /* SignInViewController.swift */; };
 		1858905623D21C3900C72C4A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858905523D21C3900C72C4A /* SignUpViewController.swift */; };
 		1858905823D21C8F00C72C4A /* UserHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858905723D21C8F00C72C4A /* UserHomeViewController.swift */; };
+		1B188DFC23D3A68F007DAFDF /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B188DFB23D3A68F007DAFDF /* HttpManager.swift */; };
+		1B8BA4D323D86ACE001E5A21 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8BA4D223D86ACE001E5A21 /* APIResponse.swift */; };
+		1BF4162A23DED6F200F4DAA3 /* CognitoUserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4162923DED6F200F4DAA3 /* CognitoUserDetail.swift */; };
+		1BF7411023DF47F7008A74D4 /* CognitoUserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF7410F23DF47F7008A74D4 /* CognitoUserDetails.swift */; };
 		B1CD9D2D0E7C30BA2E1BA670 /* Pods_ios_example_girlad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FEEB66FDA09BC3A9B98C18 /* Pods_ios_example_girlad.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +39,10 @@
 		1858905323D21C2C00C72C4A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		1858905523D21C3900C72C4A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1858905723D21C8F00C72C4A /* UserHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHomeViewController.swift; sourceTree = "<group>"; };
+		1B188DFB23D3A68F007DAFDF /* HttpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
+		1B8BA4D223D86ACE001E5A21 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		1BF4162923DED6F200F4DAA3 /* CognitoUserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoUserDetail.swift; sourceTree = "<group>"; };
+		1BF7410F23DF47F7008A74D4 /* CognitoUserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoUserDetails.swift; sourceTree = "<group>"; };
 		7C45FC71AEFCEB1CF3C92592 /* Pods-ios_example_girlad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_example_girlad.release.xcconfig"; path = "Target Support Files/Pods-ios_example_girlad/Pods-ios_example_girlad.release.xcconfig"; sourceTree = "<group>"; };
 		A7FEEB66FDA09BC3A9B98C18 /* Pods_ios_example_girlad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_example_girlad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0079A1FA03F723095A924D9 /* Pods-ios_example_girlad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_example_girlad.debug.xcconfig"; path = "Target Support Files/Pods-ios_example_girlad/Pods-ios_example_girlad.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +109,10 @@
 			children = (
 				1858904F23D21BFB00C72C4A /* Constants.swift */,
 				1858905123D21C0800C72C4A /* Extentions.swift */,
+				1B188DFB23D3A68F007DAFDF /* HttpManager.swift */,
+				1B8BA4D223D86ACE001E5A21 /* APIResponse.swift */,
+				1BF4162923DED6F200F4DAA3 /* CognitoUserDetail.swift */,
+				1BF7410F23DF47F7008A74D4 /* CognitoUserDetails.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -111,7 +123,6 @@
 				C0079A1FA03F723095A924D9 /* Pods-ios_example_girlad.debug.xcconfig */,
 				7C45FC71AEFCEB1CF3C92592 /* Pods-ios_example_girlad.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -134,8 +145,7 @@
 				1858903223D2183000C72C4A /* Sources */,
 				1858903323D2183000C72C4A /* Frameworks */,
 				1858903423D2183000C72C4A /* Resources */,
-				87DBC84147809AC37916CCF1 /* [CP] Embed Pods Frameworks */,
-				B8C00159E6A7AC953457B4CD /* [CP] Copy Pods Resources */,
+				9030D2D479852F69CA350522 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,7 +225,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		87DBC84147809AC37916CCF1 /* [CP] Embed Pods Frameworks */ = {
+		9030D2D479852F69CA350522 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,23 +242,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios_example_girlad/Pods-ios_example_girlad-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B8C00159E6A7AC953457B4CD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios_example_girlad/Pods-ios_example_girlad-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ios_example_girlad/Pods-ios_example_girlad-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios_example_girlad/Pods-ios_example_girlad-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -259,11 +252,15 @@
 				1858903E23D2183000C72C4A /* ViewController.swift in Sources */,
 				1858905623D21C3900C72C4A /* SignUpViewController.swift in Sources */,
 				1858903A23D2183000C72C4A /* AppDelegate.swift in Sources */,
+				1B8BA4D323D86ACE001E5A21 /* APIResponse.swift in Sources */,
+				1B188DFC23D3A68F007DAFDF /* HttpManager.swift in Sources */,
+				1BF4162A23DED6F200F4DAA3 /* CognitoUserDetail.swift in Sources */,
 				1858905423D21C2C00C72C4A /* SignInViewController.swift in Sources */,
 				1858905223D21C0800C72C4A /* Extentions.swift in Sources */,
 				1858903C23D2183000C72C4A /* SceneDelegate.swift in Sources */,
 				1858905823D21C8F00C72C4A /* UserHomeViewController.swift in Sources */,
 				1858905023D21BFB00C72C4A /* Constants.swift in Sources */,
+				1BF7411023DF47F7008A74D4 /* CognitoUserDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +406,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LVB296NMJW;
+				DEVELOPMENT_TEAM = 3DT23C699A;
 				INFOPLIST_FILE = ios_example_girlad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -428,7 +425,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LVB296NMJW;
+				DEVELOPMENT_TEAM = 3DT23C699A;
 				INFOPLIST_FILE = ios_example_girlad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
